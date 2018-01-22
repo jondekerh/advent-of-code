@@ -6,22 +6,17 @@ inputList = [int(x) for x in str(startInput)]
 #this list will contain all the numbers which satisfy the condition
 outputList = []
 
-#compare current number to next one in list. if they're equal, append the current number to the list
+#if the index is greater than half of the input length, compare its value to the value halfway BEHIND it
 for index, val in enumerate(inputList):
     l = len(inputList)
     l2 = int(l / 2)
-#    if index < (l - 1):
-#        nextVal = inputList[index + l2] #OUT OF RANGE - SOLVE THAT
-#        if val == nextVal:
-#            outputList.append(val)
-
-#when it gets to the last number on the list, use this special clause to compare it with the first number
     if index > ((l - 1) - l2):
-        nextVal = inputList[index - l2] #OUT OF RANGE - SOLVE THAT
+        nextVal = inputList[index - l2]
         if val == nextVal:
             outputList.append(val)
+#otherwise, compare its value to the one halfway IN FRONT of it
     else:
-        nextVal = inputList[index + l2] #OUT OF RANGE - SOLVE THAT
+        nextVal = inputList[index + l2]
         if val == nextVal:
             outputList.append(val)
 
