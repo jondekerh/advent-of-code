@@ -30,8 +30,8 @@ for row in inputMatrix:
                 #if iterNum divides staticNum cleanly then we know we have found the correct pair
                 #divide the two and then append the quotient as an integer to checksumList
                 if staticNum % iterNum == 0:
-                    divisionOfTheTwo = staticNum / iterNum
-                    checksumList.append(int(divisionOfTheTwo))
+                    quotient = staticNum / iterNum
+                    checksumList.append(int(quotient))
 
 ans = sum(checksumList)
 print(ans)
