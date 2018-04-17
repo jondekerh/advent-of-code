@@ -520,7 +520,7 @@ for i in inputList:
     passphraseList = i.split(' ')
     #by checking the list's length against the length of its set we can see if there are any dupicates since set() removes them
     if (len(passphraseList) == len(set(passphraseList))):
-        #for each list that makes it through, this loop will check each element, make it into a list, order said list,
+        #for each list that makes it through, this loop will iterate over each element, make it into a list, order said list,
         #remake it into a string, and append it to a new list
         passphraseSortedList = []
         for i in passphraseList:
@@ -528,7 +528,6 @@ for i in inputList:
             passphraseSortedList.append(sortedString)
         #once that's done the same method from the beginning can be used to check for anagrams by removing any duplicates
         if (len(passphraseSortedList) == len(set(passphraseSortedList))):
-            print(passphraseSortedList)
             ans += 1
 
 print(ans)
